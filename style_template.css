@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+} /* RESET CSS */
+
+body {
+    max-width: 1200px; /* Définir la résolution (LARGEUR) max VERSION DESKTOP */
+    background-color: rgb(31,31,31);
+}
+
+/* <------------------------------- Adaptation Mobile ----------------------------> */
+
+@media screen and (max-width: 780px) {
+    
+    body {
+        max-width: 780px; /* Définir la résolution (LARGEUR) max VERSION MOBILE */
+    }
+
+    /* <--------------------- RESIZE_IMAGES_MOBILE -------------------------> */
+
+    #content > #grid_ingrédiant {
+        display: block;
+        text-align: center;
+        margin: 0 100px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    #header > #preambule_recette > img {
+        margin-left: 1px;
+        border-radius: 0;
+        position: absolute;
+        bottom: 70px;
+        width: 482px;
+    }
+
+    #header > #technique_recette {
+        width: 482px;
+        height: 100px;
+        background-color:#938372;
+        position: absolute;
+        margin-left: 1px;
+        border-radius: 60px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #content > #explication_recette > p {
+        color: white;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+}
+
+/* <----------------------------------- MENU PRINCIPAL ---------------------------> */
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    color: white;
+    top: 10px;
+    z-index: 1;
+}
+
+#menuToggle > a {
+    text-decoration: none;
+    color: white;
+    background-color: orangered;
+    transition: color 0.5s ease;
+}
+
+#menuToggle > input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#menuToggle > span {
+    display: block;
+    width: 50px;
+    height: 6px;
+    margin-bottom: 5px;
+    position: relative;
+    background: orangered;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+#menu {
+    position: absolute;
+    width: 180px;
+    height: 160px;
+    padding: 15px;
+    background-color: rgb(31,31,31);
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    border-radius: 20px;
+    border: solid orangered;
+    color: white;
+}
+
+#menu > li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle > input:checked ~ ul {
+    transform: none;
+}
+
+#menu > a {
+    text-decoration:none;
+    color: orangered;
+}
+
+/* <----------------------------------- PREAMBULE RECETTE ---------------------------> */
+
+#header > img {
+    position: relative;
+}
+
+#preambule_recette > img {
+    margin-left: 130px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 70px;
+    width: 950px;
+}
+
+#technique_recette {
+    width: 556px;
+    height: 100px;
+    background-color:#938372;
+    position: absolute;
+    margin-left: 320px;
+    bottom: 20px;
+    border-radius: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#temps_total > p {
+    margin-top:15px;
+    font-size: 20px;
+}
+
+#trait /* Trait de séparation */ {
+    border-top: black 1px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+#temps_repos > p {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+#temps_préparation, #temps_repos, #temps_cuisson {
+    display: inline-block;
+}
+
+/* <------------------------------- GRID INGREDIANTS --------------------------------> */
+
+#grid_ingrédiant {
+    color: white;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    margin-top: 300px;
+    margin-left: 260px;
+    width: 500px;
+}
+
+#ingrédiant_un {
+    grid-column: 1 / 2;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_deux {
+    grid-column: 2 / 3;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_trois {
+    grid-column: 3 / 4;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_quatre {
+    grid-column: 4 / 5;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_cinq {
+    grid-column: 1 / 2;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_six {
+    grid-column: 2 / 3;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_sept {
+    grid-column: 3 / 4;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_huit {
+    grid-column: 4 / 5;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+#ingrédiant_un > p, #ingrédiant_deux > p, #ingrédiant_trois > p, #ingrédiant_quatre > p, #ingrédiant_cinq > p, #ingrédiant_six > p, #ingrédiant_sept > p, #ingrédiant_huit > p {
+    float: right;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+/* <------------------------------- TITRE + RECETTE --------------------------------> */
+
+#titre {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    border: orangered solid 5px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+#explication_recette > p {
+    color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
